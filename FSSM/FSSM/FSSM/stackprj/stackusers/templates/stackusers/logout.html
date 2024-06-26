@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <title>Logout Page</title>
+    <style>
+        body {
+            background: linear-gradient(230deg, rgb(205, 202, 156) 0%, rgba(80, 158, 60, 0.775) 100%);
+            font-family: 'Poppins', sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            overflow: hidden; /* Prevent scrolling during animation */
+        }
+        .containerr {
+            text-align: center;
+            transform: translateY(-100vh);
+            animation: moveToCenter 3s forwards;
+        }
+        @keyframes moveToCenter {
+            0% {
+                transform: translateY(-100vh);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        #logoutid1 {
+            font-size: 30px;
+            color: black;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        #logout-btn {
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        #logout-btn:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+        #logout-btn a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="containerr">
+        <h3 id="logoutid1">vous avez été déconnecté!</h3>
+        <button id="logout-btn"><a href="{% url 'login' %}">se connecter</a></button>
+    </div>
+</body>
+</html>
